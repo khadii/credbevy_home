@@ -51,7 +51,7 @@ export default function Header() {
       </nav>
 
       {/* Mobile and Tablet Navigation */}
-      <nav className="lg:hidden sticky top-0 left-0 w-full z-50 bg-white ">
+      <nav className="lg:hidden sticky top-0 left-0 w-full z-50 bg-bg ">
         <div className="flex justify-between items-center px-4 py-4">
           {/* Mobile Logo */}
           <div>

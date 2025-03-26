@@ -50,7 +50,7 @@ export default function Footer() {
         </div>
         {/* Get Started Now button */}
         <div className="w-full lg:justify-center flex pb-[60px] sm:pb-[80px]  lg:pb-[104px]">
-          <CustomButtonTwo text={"Get Started Now"} className="px-16 sm:px-24  lg:px-28" />
+          <CustomButtonTwo text={"Get Started Now"} className="px-12  lg:px-28" />
         </div>
 
         {/* footer links */}

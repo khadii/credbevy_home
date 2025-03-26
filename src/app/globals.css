@@ -50,6 +50,8 @@ body {
 .bg-bgdarkgreen { background-color: var(--color-darkgreen); }
 .bg-white { background-color: var(--color-mywhite); }
 .bg-myblack2 { background-color: var(--color-myblack2); }
+.bg-bg { background-color: var(--background); }
+
 
 @keyframes marquee {
   0% {
