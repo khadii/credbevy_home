@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #FAFAFA;
+  --foreground: #171717;
+
+   /* Custom Colors */
+   --color-mygreen: #156064;
+   /* myblac */
+   --color-myblack2: #111111;
+   --color-myblack: #333333;
+   --color-myyellow: #F4C418;
+   --color-mywhite: #FFFFFF;
+   --color-darkgreen: #0C363C;
+ 
+}
+
+/* Custom Fonts */
+.font-bold { font-family: var(--font-general-bold), sans-serif; }
+.font-medium { font-family: var(--font-general-medium), sans-serif; }
+.font-semibold { font-family: var(--font-general-semibold), sans-serif; }
+.font-regular { font-family: var(--font-general-regular), sans-serif; }
+.font-light { font-family: var(--font-general-light), sans-serif; }
+.font-extralight { font-family: var(--font-general-extralight), sans-serif; }
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-general-regular), sans-serif;
+}
+
+
+/* Apply to Tailwind Utility Classes */
+.text-mygreen { color: var(--color-mygreen); }
+.text-myyellow { color: var(--color-myyellow); }
+.text-mywhite { color: var(--color-mywhite); }
+.text-myblack { color: var(--color-myblack); }
+.text-myblack2 { color: var(--color-myblack2); }
+.bg-bggreen { background-color: var(--color-mygreen); }
+.bg-bgdarkgreen { background-color: var(--color-darkgreen); }
+.bg-white { background-color: var(--color-mywhite); }
+.bg-myblack2 { background-color: var(--color-myblack2); }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 60s linear infinite;
+  width: max-content;
+}
+
+/* <p className="text-primary font-bold">This is bold text.</p>
+<p className="text-secondary font-medium">This is medium text.</p>
+<p className="text-accent font-light">This is light text.</p> */
