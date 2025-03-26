@@ -36,10 +36,10 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-bgdarkgreen w-full flex justify-center lg:px-24 px-2 md:px-4 relative">
+    <footer className="bg-bgdarkgreen w-full flex justify-center lg:px-24 px-4 md:px-4 relative">
       <div className=" max-w-7xl w-full pb-[72px] relative ">
         {/* title */}
-        <div className="text-center py-[40px] sm:py-[60px] ">
+        <div className="lg:text-center py-[40px] sm:py-[60px] ">
           <p className="text-mywhite font-bold text-[32px]  lg:text-[64px]">
             Ready to Get Started?
           </p>
@@ -49,45 +49,46 @@ export default function Footer() {
           </h1>
         </div>
         {/* Get Started Now button */}
-        <div className="w-full justify-center flex pb-[60px] sm:pb-[80px]  lg:pb-[104px]">
+        <div className="w-full lg:justify-center flex pb-[60px] sm:pb-[80px]  lg:pb-[104px]">
           <CustomButtonTwo text={"Get Started Now"} className="px-16 sm:px-24  lg:px-28" />
         </div>
 
         {/* footer links */}
-        <div className="">
-          <div className="flex flex-col  lg:flex-row  lg:items-start space-y-8  lg:space-y-0   lg:space-x-[214px] py-[40px] sm:py-[60px]  lg:py-[90px] ">
-            {/* logo */}
-            <div className="flex justify-center  lg:justify-start">
-              <img src={logo} alt="credbevy" className="w-[120px] sm:w-[140px] h-full" />
-            </div>
+        <div className=" w-full">
+        <div className="flex flex-col lg:flex-row lg:items-start space-y-8 lg:space-y-0 lg:space-x-[214px] py-[40px] sm:py-[60px] lg:py-[90px]">
+  {/* logo */}
+  <div className="flex  lg:justify-start">
+    <img src={logo} alt="credbevy" className="w-[120px] sm:w-[140px] h-full" />
+  </div>
 
-            {/* footer links */}
-            <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-center gap-8 sm:gap-12 px-2   md:justify-between w-full">
-              {footerData.map((section, index) => (
-                <div key={index} className="text-center sm:text-left">
-                  <h3 className="font-semibold mb-4 text-base sm:text-lg text-mywhite">
-                    {section.title}
-                  </h3>
-                  <ul className="space-y-2">
-                    {section.links.map((link, i) => (
-                      <li key={i}>
-                        <Link
-                          href={link.path}
-                          className="hover:underline text-mywhite text-xs sm:text-sm font-medium"
-                        >
-                          {link.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
+  {/* footer links */}
+  <div className="flex flex-col sm:flex-row sm:flex-wrap gap-8 sm:gap-12 px-2 w-full md:justify-start lg:justify-between">
+    {footerData.map((section, index) => (
+      <div key={index} className="text-left">
+        <h3 className="font-semibold mb-4 text-base sm:text-lg text-mywhite">
+          {section.title}
+        </h3>
+        <ul className="space-y-2">
+          {section.links.map((link, i) => (
+            <li key={i}>
+              <Link
+                href={link.path}
+                className="hover:underline text-mywhite text-xs sm:text-sm font-medium"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+</div>
+
         </div>
 
         {/* media */}
-        <div className="max-w-[1040px] mx-auto px-4 sm:px-6">
+        <div className="max-w-[1040px] mx-auto md:px-4 sm:px-6">
           <div className="border-t text-mywhite mb-6 sm:mb-8"></div>
 
           <div className="flex flex-col sm:flex-row justify-between items-start space-y-6 sm:space-y-0 mb-6 sm:mb-8">
