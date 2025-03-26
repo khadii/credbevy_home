@@ -94,7 +94,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-start space-y-6 sm:space-y-0 mb-6 sm:mb-8">
             <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
               <p className="text-xs sm:text-sm font-normal text-mywhite">2023 CredBevy. All right reserved.</p>
-              <div className="flex flex-col sm:flex-row sm:space-x-6 space-y-2 sm:space-y-0">
+              <div className="flex flex-row sm:flex-row space-x-6 sm:space-x-6 space-y-2 sm:space-y-0">
                 <Link href="/privacy-policy" className="text-xs sm:text-sm font-normal text-mywhite underline">
                   Privacy Policy
                 </Link>
@@ -137,7 +137,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-        <div className="absolute top-8 right-8  lg:top-12  lg:right-12 lg:top-48 lg:right-20 hidden lg:flex">
+        <div className="absolute top-8 right-8  lg:top-48 lg:right-20 hidden lg:flex">
         <div className="relative w-20 h-20">
           <div className="absolute top-0 left-0 w-6 h-6  lg:w-8  lg:h-8 rounded-full bg-[#F4C418]"></div>
           <div className="absolute top-0 right-2 w-6 h-6  lg:w-8  lg:h-8 rounded-full bg-[#F4C418]"></div>

@@ -22,7 +22,7 @@ export default function Header() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="lg:w-full lg:flex lg:justify-center lg:px-24 py-10 hidden">
+      <nav className="lg:w-full lg:flex lg:justify-center lg:px-24 py-10 hidden ">
         <div className="w-full lg:flex items-center justify-between max-w-7xl">
           {/* Logo */}
           <div>
