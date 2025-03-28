@@ -44,28 +44,25 @@ export default function Footertwo() {
 
   return (
     <footer className="w-full ">
-      <div className="w-full flex justify-center bg-bgdarkgreen ">
-        {/* <div className="w-full h-full absolute   pointer-events-none bottom-10 -left-[500px]">
-  <img  alt="cred" src={lines}  className="h-full w-full" />
-    </div> */}
-        <div className=" w-full flex justify-center lg:px-24 px-[22px] lg:py-[163px] py-[144px] ">
-          <div className="w-full flex justify-center">
-            <div className="w-full lg:flex-row flex flex-col items-center lg:justify-between max-w-[1279px] gap-8">
-              <div className="w-full">
-                <p className="font-bold lg:text-[45px] leading-[150%] tracking-[0%] md:max-w-[666px] text-mygreen text-[32px] w-full mb-2 max-w-[383px]  ">
-                  Start getting custom-made loans in seconds
-                </p>
-                <h1 className="font-medium italic text-myblack lg:text-[24px] text-sm leading-[150%] tracking-[0%] lg:max-w-[666px] text-mygreen max-w-[383px]">
-                  Take the first step toward achieving your financial goals.
-                </h1>
-              </div>
-              <div className="w-full lg:w-[342px]">
-                <CustomButtonTwo text={"Get Started Now"} className="w-full" />
-              </div>
-            </div>
-          </div>
+     <div className="w-full flex justify-center bg-bgdarkgreen">
+  <div className="w-full flex justify-center lg:px-24 px-[22px] lg:py-[163px] py-[144px]">
+    <div className="w-full flex justify-center">
+      <div className="w-full lg:flex-row flex flex-col items-center lg:items-start justify-center lg:justify-between max-w-[1279px] gap-8">
+      <div className="w-full flex flex-col items-center lg:items-start">
+  <p className="font-bold lg:text-[45px] leading-[150%] tracking-[0%] md:max-w-[666px] text-mygreen text-[32px] mb-2 max-w-[383px] text-left">
+    Start getting custom-made loans in seconds
+  </p>
+  <h1 className="font-medium italic text-myblack lg:text-[24px] text-sm leading-[150%] tracking-[0%] lg:max-w-[666px] text-mygreen max-w-[383px] text-left">
+    Take the first step toward achieving your financial goals.
+  </h1>
+</div>
+        <div className="w-full lg:w-[342px] flex justify-center lg:justify-start">
+          <CustomButtonTwo text={"Get Started Now"} className="w-full" />
         </div>
       </div>
+    </div>
+  </div>
+</div>
       {/* white */}
       <div className=" flex justify-center pt-[63px] lg:pt-[90px] lg:pl-[136px] lg:pr-[80px] px-4 lg:px-0">
         <div className="  w-full flex lg:flex-row lg:gap-[121px] flex-col gap-6 lg:mb-[90px] mb-[52px] max-w-[1224px]">
