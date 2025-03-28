@@ -59,7 +59,7 @@ export default function Footertwo() {
                   Take the first step toward achieving your financial goals.
                 </h1>
               </div>
-              <div className="w-full">
+              <div className="w-full lg:w-[342px]">
                 <CustomButtonTwo text={"Get Started Now"} className="w-full" />
               </div>
             </div>
