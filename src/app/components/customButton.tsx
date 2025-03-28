@@ -36,7 +36,7 @@ export const CustomButtonMobile: React.FC<ButtonProps> = ({ onClick, text, class
 export const CustomButtonTwo: React.FC<ButtonProps> = ({ onClick, text, className = "" }) => {
     return (
       <button
-        className={`bg-bggreen  text-mywhite h-16 text-center lg:text-sm text-lg font-semibold rounded-sm ${className}`}
+        className={`bg-bggreen  text-mywhite h-16 text-center lg:text-sm  font-semibold rounded-sm ${className}`}
         onClick={onClick}
       >
         {text}

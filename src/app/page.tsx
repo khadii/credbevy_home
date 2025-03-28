@@ -6,6 +6,7 @@ import Home_section_two from "./components/major/Home_section_two";
 import Home_section_three from "./components/Home_section_three";
 import Home_sections_four from "./components/Home_sections_four";
 import Home_sections_five from "./components/Home_sections_five";
+import Footertwo from "./components/major/Footertwo";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
    <Home_section_three/>
    <Home_sections_four/>
    <Home_sections_five/>
-   <Footer/>
+   <Footertwo/>
    </>
  
   );

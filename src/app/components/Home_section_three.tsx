@@ -6,10 +6,10 @@ export default function Home_section_three() {
     <section className=" lg:pt-[60px] lg:px-24 px-[20px]  pt-[30px]  bg-bgdarkgreen w-full flex justify-center lg:pb-[172px] pb-[88px]">
       <div>
         {/* header */}
-        <p className="text-mywhite font-bold lg:text-[40px] text-2xl text-center">
+        <p className="text-myblack font-bold lg:text-[40px] text-2xl text-center">
           Why Choose Credbevy?
         </p>
-        <h1 className="text-base font-semibold italic text-mywhite text-center lg:mb-[145px] mb-[32px] opacity-80">
+        <h1 className="text-base font-semibold italic text-myblack text-center lg:mb-[145px] mb-[32px] opacity-80">
           Why Thousands Trust Credbevy for Loans
         </h1>
         <div className="w-full  grid lg:grid-cols-3 md:grid-cols-3 gap-[38px] ">

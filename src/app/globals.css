@@ -12,8 +12,9 @@
    --color-myblack: #333333;
    --color-myyellow: #F4C418;
    --color-mywhite: #FFFFFF;
-   --color-darkgreen: #0C363C;
-   --color-darkgreentwo: #143E44;
+   --color-darkgreen: #DFFFEA;
+   --color-darkgreentwo: #005A46;
+   --color-mygrey:#8A8B9F;
  
 }
 
@@ -42,6 +43,7 @@ body {
 
 
 /* Apply to Tailwind Utility Classes */
+.text-mygrey { color: var(--color-mygrey); }
 .text-mygreen { color: var(--color-mygreen); }
 .text-myyellow { color: var(--color-myyellow); }
 .text-mywhite { color: var(--color-mywhite); }
