@@ -42,12 +42,17 @@ export default function Footertwo() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+
+
+
+
+  
   return (
-    <footer className="w-full ">
+    <footer className="w-full relative overflow-hidden">
      <div className="w-full flex justify-center bg-bgdarkgreen">
   <div className="w-full flex justify-center lg:px-24 px-[22px] lg:py-[163px] py-[144px]">
     <div className="w-full flex justify-center">
-      <div className="w-full lg:flex-row flex flex-col items-center lg:items-start justify-center lg:justify-between max-w-[1279px] gap-8">
+      <div className="w-full lg:flex-row flex flex-col items-center lg:items-center justify-center lg:justify-between max-w-[1279px] gap-8">
       <div className="w-full flex flex-col items-center lg:items-start">
   <p className="font-bold lg:text-[45px] leading-[150%] tracking-[0%] md:max-w-[666px] text-mygreen text-[32px] mb-2 max-w-[383px] text-left">
     Start getting custom-made loans in seconds
@@ -61,6 +66,9 @@ export default function Footertwo() {
         </div>
       </div>
     </div>
+  </div>
+  <div className="absolute -left-24  -top-24">
+    <img src="images/Group.svg"/> 
   </div>
 </div>
       {/* white */}

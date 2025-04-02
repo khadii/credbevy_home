@@ -1,8 +1,9 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import CustomButton, { CustomButtonMobile } from "../customButton";
 import { ChevronDown, Menu, X } from "lucide-react";
+import NavbarCard, { NavbarCard2, NavbarCarddesktop, NavbarCarddesktop2, NavbarCarddesktop3, NavbarCardm3 } from "./Cards/navbarCard";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -11,55 +12,44 @@ export default function Header() {
   const footerData = [
     {
       title: "Products",
-      links: [
-        { name: "Features", path: "/features" },
-        { name: "Integrations", path: "/integrations" },
-        { name: "Support", path: "/support" },
-        { name: "Why CredBevy", path: "/why-credbevy" },
-      ],
+      data: <NavbarCard2 />
     },
     {
       title: "Features",
-      links: [
-        { name: "Multiple loan offers", path: "/guides" },
-        { name: "Credit Score", path: "/emi-calculator" },
-        { name: "Free Transfer", path: "/blog" },
-        { name: "Pay Bills", path: "/security" },
-        { name: "Integrations", path: "/security" },
-        { name: "API Integrations", path: "/security" },
-        { name: "Partner Integrations", path: "/security" },
-      ],
+      data: <NavbarCard />
     },
     {
       title: "Partners",
-      links: [
-        { name: "Guides", path: "/guides" },
-        { name: "EMI Calculator", path: "/emi-calculator" },
-        { name: "Blog", path: "/blog" },
-        { name: "Security", path: "/security" },
-      ],
+      data: <NavbarCardm3 />
     },
     {
       title: "Company",
-      links: [
-        { name: "About us ", path: "/guides" },
-        { name: "Contact us", path: "/emi-calculator" },
-        { name: "Career", path: "/blog" },
-        { name: "News and Media", path: "/security" },
-      ]},
-    // {
-    //   title: "Pricing",
-    //   links: [
-    //     { name: "About", path: "/about" },
-    //     { name: "Contact", path: "/contact" },
-    //     { name: "Media", path: "/media" },
-    //     { name: "Partners", path: "/partners" },
-    //     { name: "Team", path: "/team" },
-    //   ],
-    // },
+      data: <NavbarCard />
+    },
   ];
 
+  const footerDataDesktop = [
+    {
+      title: "Products",
+      data: <NavbarCarddesktop2 />
+    },
+    {
+      title: "Features",
+      data: <NavbarCarddesktop />
+    },
+    {
+      title: "Partners",
+      data: <NavbarCarddesktop3 />
+    },
+    {
+      title: "Resources",
+      data: <NavbarCarddesktop3 />
+    },
+  ];
+  
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const dropdownRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const triggerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
   const toggleDropdown = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -69,10 +59,35 @@ export default function Header() {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      // Check if click is outside all dropdowns and their triggers
+      const isOutside = dropdownRefs.current.every((ref, index) => {
+        const trigger = triggerRefs.current[index];
+        return (
+          (!ref || !ref.contains(event.target as Node)) &&
+          (!trigger || !trigger.contains(event.target as Node))
+        );
+      });
+
+      if (isOutside) {
+        setOpenIndex(null);
+      }
+    };
+
+    // Add when component mounts
+    document.addEventListener("mousedown", handleClickOutside);
+    
+    // Clean up when component unmounts
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="lg:w-full lg:flex lg:justify-center lg:px-24 py-10 hidden ">
+      <nav className="lg:w-full xl:flex lg:justify-center lg:px-24 py-10 hidden relative">
         <div className="w-full lg:flex items-center justify-between max-w-7xl">
           {/* Logo */}
           <div>
@@ -80,36 +95,46 @@ export default function Header() {
           </div>
 
           {/* Navigation Links */}
-          <div className="flex space-x-6 lg:space-x-10">
-            {footerData.map((data, index) => (
-              <div key={index} className="relative">
-                <div 
-                  className="font-bold text-base text-myblack flex items-center space-x-2 cursor-pointer"
-                  onClick={() => toggleDropdown(index)}
-                >
-                  <p>{data.title}</p>
-                  <ChevronDown 
-                    size={16} 
-                    className={`transition-transform ${openIndex === index ? "rotate-180" : ""}`}
-                  />
-                </div>
-                
-                {/* Dropdown Menu */}
-                {openIndex === index && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-lg rounded-md py-2 z-50">
-                    {data.links.map((link, linkIndex) => (
-                      <Link 
-                        key={linkIndex} 
-                        href={link.path}
-                        className="block px-4 py-2 text-sm text-mygrey hover:bg-gray-100"
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
+          <div className="flex space-x-6 lg:space-x-10 relative">
+            {footerDataDesktop.map((data, index) => {
+              // Calculate position for each dropdown
+              let dropdownPosition = "";
+              if (index === 0) {
+                // First item
+                dropdownPosition = "-left-[380px]"; 
+              } else if (index === footerDataDesktop.length - 1) {
+                // Last item
+                dropdownPosition = "-left-[600px]";
+              } else {
+                // Middle items
+                dropdownPosition ="-left-[500px]"; 
+              }
+
+              return (
+                <div key={index} className="relative">
+                  <div 
+                    ref={el => { triggerRefs.current[index] = el; }}
+                    className="font-bold text-base text-myblack flex items-center space-x-2 cursor-pointer"
+                    onClick={() => toggleDropdown(index)}
+                  >
+                    <p>{data.title}</p>
+                    <ChevronDown 
+                      size={16} 
+                      className={`transition-transform ${openIndex === index ? "rotate-180" : ""}`}
+                    />
                   </div>
-                )}
-              </div>
-            ))}
+                  
+                  {openIndex === index && (
+                    <div 
+                      ref={el => { dropdownRefs.current[index] = el; }}
+                      className={`w-full absolute ${dropdownPosition} top-12 z-50`}
+                    >
+                      {data.data}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
 
           {/* Get Started Button */}
@@ -120,8 +145,8 @@ export default function Header() {
       </nav>
 
       {/* Mobile and Tablet Navigation */}
-      <nav className="lg:hidden sticky top-0 left-0 w-full z-50 bg-bg ">
-        <div className="flex justify-between items-center px-4 py-4">
+      <nav className="xl:hidden sticky top-0 left-0 w-full z-50 bg-bg">
+        <div className="flex justify-between items-center px-4 py-4 overflow-scroll ">
           {/* Mobile Logo */}
           <div>
             <img src={logo} alt="credbevy" className="h-8 w-auto" />
@@ -135,7 +160,10 @@ export default function Header() {
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="absolute top-0 right-6 left-6 bg-white z-40 overflow-y-auto shadow-lg rounded-lg pb-10">
+         <div 
+      className="fixed top-0 right-6 left-6 bg-white z-40 overflow-y-auto max-h-screen shadow-lg rounded-lg pb-10"
+      ref={el => { dropdownRefs.current[footerDataDesktop.length] = el; }}
+    >
             <div className="flex justify-between items-center px-4 py-4">
               {/* Mobile Logo */}
               <div>
@@ -155,10 +183,11 @@ export default function Header() {
               {footerData.map((data, index) => (
                 <div key={index} className="pb-4">
                   <div 
+                    ref={el => { triggerRefs.current[footerDataDesktop.length + index] = el; }}
                     className="flex justify-between items-center text-sm font-bold text-myblack cursor-pointer"
                     onClick={() => toggleDropdown(index)}
                   >
-                    <span>{data.title}</span>
+                    <span className="pb-4">{data.title}</span>
                     <ChevronDown 
                       size={20} 
                       className={`transition-transform ${openIndex === index ? "rotate-180" : ""}`}
@@ -167,17 +196,8 @@ export default function Header() {
                   
                   {/* Mobile Dropdown Items */}
                   {openIndex === index && (
-                    <div className="mt-4  space-y-4">
-                      {data.links.map((link, linkIndex) => (
-                        <Link
-                          key={linkIndex}
-                          href={link.path}
-                          onClick={toggleMobileMenu}
-                          className="block text-sm text-mygrey font-semibold"
-                        >
-                          {link.name}
-                        </Link>
-                      ))}
+                    <div ref={el => { dropdownRefs.current[footerDataDesktop.length + index] = el; }}   className="overflow-y-auto max-h-[50vh]">
+                      {data.data}
                     </div>
                   )}
                 </div>
@@ -185,7 +205,7 @@ export default function Header() {
 
               {/* Mobile Get Started Button */}
               <div className="mt-13">
-                <CustomButtonMobile
+                <CustomButton
                   text="Get Started"
                   className="w-full"
                   onClick={toggleMobileMenu}
