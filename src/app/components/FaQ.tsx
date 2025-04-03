@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import CustomButton from './customButton';
+import CustomButton from './customButton'
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
