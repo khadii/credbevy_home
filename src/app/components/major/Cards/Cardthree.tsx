@@ -35,7 +35,7 @@ const Cardthree: React.FC<CardthreeProps> = ({
 
       <div className="flex items-center space-x-4">
         <Link href={link}>
-          <Image src={imageSrc} alt={title} height={25} width={25} />
+          <Image src={imageSrc} alt={title} height={25} width={25}   priority={true}  />
         </Link>
         <p className="text-myblack text-xs font-bold">App Store</p>
       </div>

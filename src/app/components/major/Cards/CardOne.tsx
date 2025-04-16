@@ -15,6 +15,7 @@ const CardOne: React.FC<CardOneProps> = ({ imageSrc, title, description }) => {
         {/* or your desired size */}
         <Image
          src={imageSrc} 
+         priority={true} 
           alt="features"
           fill
           className="object-contain"

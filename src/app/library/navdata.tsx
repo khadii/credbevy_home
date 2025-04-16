@@ -1,7 +1,8 @@
 import Image from "next/image";
 export const SendIconWrapper = ({ isActive }: { isActive: boolean }) => (
   <Image
-    src="./images/send.svg"
+  priority={true} 
+    src="/images/send.svg"
     alt="Send"
     height={24}
     width={24}
@@ -15,10 +16,11 @@ export const SendIconWrapper = ({ isActive }: { isActive: boolean }) => (
 
 export const Level = ({ isActive }: { isActive: boolean }) => (
   <Image
-    src="./images/level.svg"
+    src="/images/level.svg"
     alt="Send"
     height={24}
     width={24}
+    priority={true} 
     style={{
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
@@ -28,7 +30,7 @@ export const Level = ({ isActive }: { isActive: boolean }) => (
 );
 export const Global = ({ isActive }: { isActive: boolean }) => (
   <Image
-    src="./images/global.svg"
+    src="/images/global.svg"
     alt="Send"
     height={24}
     width={24}
@@ -42,7 +44,8 @@ export const Global = ({ isActive }: { isActive: boolean }) => (
 
 export const Repeat = ({ isActive }: { isActive: boolean }) => (
   <Image
-    src="./images/repeat.svg"
+  priority={true} 
+    src="/images/repeat.svg"
     alt="Send"
     height={24}
     width={24}
@@ -56,7 +59,8 @@ export const Repeat = ({ isActive }: { isActive: boolean }) => (
 
 export const Wallet = ({ isActive }: { isActive: boolean }) => (
   <Image
-    src="./images/wallet.svg"
+  priority={true} 
+    src="/images/wallet.svg"
     alt="Send"
     height={24}
     width={24}
@@ -70,9 +74,10 @@ export const Wallet = ({ isActive }: { isActive: boolean }) => (
 
 export const Command = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/command.svg"
+    src="/images/command.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -84,9 +89,10 @@ export const Command = ({ isActive }: { isActive: boolean }) => (
 
 export const Profile = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/profile-2user.svg"
+    src="/images/profile-2user.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -98,9 +104,10 @@ export const Profile = ({ isActive }: { isActive: boolean }) => (
 
 export const Call = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/call-calling.svg"
+    src="/images/call-calling.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -112,9 +119,10 @@ export const Call = ({ isActive }: { isActive: boolean }) => (
 
 export const Briefcase = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/briefcase.svg"
+    src="/images/briefcase.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -126,9 +134,10 @@ export const Briefcase = ({ isActive }: { isActive: boolean }) => (
 
 export const Teacher = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/teacher.svg"
+    src="/images/teacher.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -140,9 +149,10 @@ export const Teacher = ({ isActive }: { isActive: boolean }) => (
 
 export const Earth = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/earth.svg"
+    src="/images/earth.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -154,9 +164,10 @@ export const Earth = ({ isActive }: { isActive: boolean }) => (
 
 export const Message = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/message-question.svg"
+    src="/images/message-question.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -168,9 +179,10 @@ export const Message = ({ isActive }: { isActive: boolean }) => (
 
 export const Book = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/book-saved.svg"
+    src="/images/book-saved.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -182,9 +194,10 @@ export const Book = ({ isActive }: { isActive: boolean }) => (
 
 export const Video = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/video-slash.svg"
+    src="/images/video-slash.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -196,9 +209,10 @@ export const Video = ({ isActive }: { isActive: boolean }) => (
 
 export const Dollar = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/dollar-circle.svg"
+    src="/images/dollar-circle.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -210,9 +224,10 @@ export const Dollar = ({ isActive }: { isActive: boolean }) => (
 
 export const Bank = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/bank.svg"
+    src="/images/bank.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -224,9 +239,10 @@ export const Bank = ({ isActive }: { isActive: boolean }) => (
 
 export const Lock = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/lock.svg"
+    src="/images/lock.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -238,9 +254,10 @@ export const Lock = ({ isActive }: { isActive: boolean }) => (
 
 export const UnLock = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/unlock.svg"
+    src="/images/unlock.svg"
     alt="Send"
     style={{
       filter: isActive
@@ -252,9 +269,10 @@ export const UnLock = ({ isActive }: { isActive: boolean }) => (
 
 export const Bubble = ({ isActive }: { isActive: boolean }) => (
   <Image
+  priority={true} 
     height={24}
     width={24}
-    src="./images/bubble.svg"
+    src="/images/bubble.svg"
     alt="Send"
     style={{
       filter: isActive

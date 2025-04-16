@@ -221,7 +221,8 @@ export  function NavbarCarddesktop() {
                 <Image
             src="/images/features.svg" alt={""}
             height={300}
-            width={300}/>
+            width={300}
+            priority={true} />
 
                 <p className="font-semibold text-base text-myblack  leading-[100%] tracking-[0%] mt-2">Learn more about our Features</p>
               </div>
@@ -276,6 +277,7 @@ export  function NavbarCarddesktop2() {
         ))}
           <div>
                 <Image
+                  priority={true} 
             src="/images/product.svg" height={300}
             width={300} alt={""}/>
     
@@ -332,6 +334,7 @@ export  function NavbarCarddesktop3() {
         ))}
           <div>
                 <Image
+                  priority={true} 
                 src="/images/resources.svg"height={300}
                 width={300} alt={""}/>
         
