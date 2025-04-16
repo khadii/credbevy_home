@@ -1,286 +1,296 @@
 import Image from "next/image";
-export const SendIconWrapper = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    src="/images/send.svg"
-    alt="Send"
-    height={24}
-    width={24}
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
-        : "",
-    }}
-  />
+
+const ACTIVE_FILTER = "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)";
+
+type IconProps = {
+  isActive: boolean;
+  className?: string;
+};
+
+export const SendIconWrapper = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      src="/images/send.svg"
+      alt="Send"
+      height={24}
+      width={24}
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Level = ({ isActive }: { isActive: boolean }) => (
-  <Image
-    src="/images/level.svg"
-    alt="Send"
-    height={24}
-    width={24}
-    priority={true} 
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
-        : "",
-    }}
-  />
-);
-export const Global = ({ isActive }: { isActive: boolean }) => (
-  <Image
-    src="/images/global.svg"
-    alt="Send"
-    height={24}
-    width={24}
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
-        : "",
-    }}
-  />
+export const Level = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      src="/images/level.svg"
+      alt="Level"
+      height={24}
+      width={24}
+      priority={true}
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Repeat = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    src="/images/repeat.svg"
-    alt="Send"
-    height={24}
-    width={24}
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
-        : "",
-    }}
-  />
+export const Global = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      src="/images/global.svg"
+      alt="Global"
+      height={24}
+      width={24}
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Wallet = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    src="/images/wallet.svg"
-    alt="Send"
-    height={24}
-    width={24}
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
-        : "",
-    }}
-  />
+export const Repeat = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      src="/images/repeat.svg"
+      alt="Repeat"
+      height={24}
+      width={24}
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Command = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/command.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
-        : "",
-    }}
-  />
+export const Wallet = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      src="/images/wallet.svg"
+      alt="Wallet"
+      height={24}
+      width={24}
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Profile = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/profile-2user.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
-        : "",
-    }}
-  />
+export const Command = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/command.svg"
+      alt="Command"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Call = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/call-calling.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
-        : "",
-    }}
-  />
+export const Profile = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/profile-2user.svg"
+      alt="Profile"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Briefcase = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/briefcase.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Call = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/call-calling.svg"
+      alt="Call"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Teacher = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/teacher.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Briefcase = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/briefcase.svg"
+      alt="Briefcase"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Earth = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/earth.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Teacher = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/teacher.svg"
+      alt="Teacher"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Message = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/message-question.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Earth = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/earth.svg"
+      alt="Earth"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Book = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/book-saved.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Message = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/message-question.svg"
+      alt="Message"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Video = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/video-slash.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Book = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/book-saved.svg"
+      alt="Book"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Dollar = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/dollar-circle.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Video = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/video-slash.svg"
+      alt="Video"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Bank = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/bank.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Dollar = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/dollar-circle.svg"
+      alt="Dollar"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Lock = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/lock.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Bank = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/bank.svg"
+      alt="Bank"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const UnLock = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/unlock.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const Lock = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/lock.svg"
+      alt="Lock"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
 
-export const Bubble = ({ isActive }: { isActive: boolean }) => (
-  <Image
-  priority={true} 
-    height={24}
-    width={24}
-    src="/images/bubble.svg"
-    alt="Send"
-    style={{
-      filter: isActive
-        ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
-        : "",
-    }}
-  />
+export const UnLock = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/unlock.svg"
+      alt="Unlock"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
 );
+
+export const Bubble = ({ isActive, className = "" }: IconProps) => (
+  <div className={className}>
+    <Image
+      priority={true}
+      height={24}
+      width={24}
+      src="/images/bubble.svg"
+      alt="Bubble"
+      style={{
+        filter: isActive ? ACTIVE_FILTER : "",
+      }}
+    />
+  </div>
+);
+
 export const product = [
   {
     title: "Product",

@@ -15,6 +15,7 @@
    --color-darkgreen: #DFFFEA;
    --color-darkgreentwo: #005A46;
    --color-mygrey:#8A8B9F;
+   --color-mygrey2:#8C8C8C;
  
 }
 
@@ -56,6 +57,7 @@ body {
 .bg-myblack2 { background-color: var(--color-myblack2); }
 .bg-bg { background-color: var(--background); }
 .bg-darkgreentwo { background-color: var(--color-darkgreentwo); }
+.text-mygrey2 { color: var(--color-mygrey2); }
 
 
 @keyframes marquee {

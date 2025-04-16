@@ -7,12 +7,29 @@ import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 
+const linkStyles = {
+  active: {
+    bg: "bg-[#F6F6F6]",
+    text: "text-mygreen",
+    icon: "text-mygreen"
+  },
+  inactive: {
+    text: "text-myblack",
+    icon: "text-myblack"
+  },
+  hover: {
+    group: "group hover:bg-[#F6F6F6]",
+    text: "group-hover:text-mygreen",
+    icon: "group-hover:text-mygreen"
+  }
+};
+
 export default function NavbarCard() {
   const pathname = usePathname();
 
   return (
     <div className="bg-white rounded-[10px] px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] overflow-y-scroll h-full"> {/* Added max height and overflow */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] overflow-y-scroll h-full">
         {Features.map((section, index) => (
           <div key={index}>
             <h3 className="text-mygrey font-semibold text-sm mb-[14px]">
@@ -36,13 +53,17 @@ export default function NavbarCard() {
                   <Link
                     href={link.path}
                     key={i}
-                    className={`flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md hover:bg-[#F6F6F6] transition-colors duration-200 ${
-                      isActive ? "bg-[#F6F6F6]" : ""
-                    }`}
+                    className={`group flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md transition-colors duration-200 
+                      ${linkStyles.hover.group} ${isActive ? linkStyles.active.bg : ""}`}
                   >
-                    <IconComponent isActive={isActive} />
+                    <div className={`${isActive ? linkStyles.active.icon : linkStyles.inactive.icon} 
+                      ${linkStyles.hover.icon}`}>
+                      <IconComponent isActive={isActive} />
+                    </div>
                     <div>
-                      <p className={`text-base ${isActive?"text-mygreen":"text-myblack"} font-semibold`}>
+                      <p className={`text-base font-semibold 
+                        ${isActive ? linkStyles.active.text : linkStyles.inactive.text} 
+                        ${linkStyles.hover.text}`}>
                         {link.name}
                       </p>
                       <p className="text-[#8C8C8C] text-sm max-w-[284px] font-medium">
@@ -60,15 +81,12 @@ export default function NavbarCard() {
   );
 }
 
-
-
-
-export  function NavbarCard2() {
+export function NavbarCard2() {
   const pathname = usePathname();
 
   return (
     <div className="bg-white rounded-[10px] px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] overflow-y-scroll h-full"> {/* Added max height and overflow */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] overflow-y-scroll h-full">
         {product.map((section, index) => (
           <div key={index}>
             <h3 className="text-mygrey font-semibold text-sm mb-[14px]">
@@ -92,13 +110,17 @@ export  function NavbarCard2() {
                   <Link
                     href={link.path}
                     key={i}
-                    className={`flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md hover:bg-[#F6F6F6] transition-colors duration-200 ${
-                      isActive ? "bg-[#F6F6F6]" : ""
-                    }`}
+                    className={`group flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md transition-colors duration-200 
+                      ${linkStyles.hover.group} ${isActive ? linkStyles.active.bg : ""}`}
                   >
-                    <IconComponent isActive={isActive} />
+                    <div className={`${isActive ? linkStyles.active.icon : linkStyles.inactive.icon} 
+                      ${linkStyles.hover.icon}`}>
+                      <IconComponent isActive={isActive} />
+                    </div>
                     <div>
-                      <p className={`text-base ${isActive?"text-mygreen":"text-myblack"} font-semibold`}>
+                      <p className={`text-base font-semibold 
+                        ${isActive ? linkStyles.active.text : linkStyles.inactive.text} 
+                        ${linkStyles.hover.text}`}>
                         {link.name}
                       </p>
                       <p className="text-[#8C8C8C] text-sm max-w-[284px] font-medium">
@@ -116,14 +138,12 @@ export  function NavbarCard2() {
   );
 }
 
-
-
-export  function NavbarCardm3() {
+export function NavbarCardm3() {
   const pathname = usePathname();
 
   return (
     <div className="bg-white rounded-[10px] px-4">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] overflow-y-scroll h-full"> {/* Added max height and overflow */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-[20px] overflow-y-scroll h-full">
         {Resources.map((section, index) => (
           <div key={index}>
             <h3 className="text-mygrey font-semibold text-sm mb-[14px]">
@@ -147,13 +167,17 @@ export  function NavbarCardm3() {
                   <Link
                     href={link.path}
                     key={i}
-                    className={`flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md hover:bg-[#F6F6F6] transition-colors duration-200 ${
-                      isActive ? "bg-[#F6F6F6]" : ""
-                    }`}
+                    className={`group flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md transition-colors duration-200 
+                      ${linkStyles.hover.group} ${isActive ? linkStyles.active.bg : ""}`}
                   >
-                    <IconComponent isActive={isActive} />
+                    <div className={`${isActive ? linkStyles.active.icon : linkStyles.inactive.icon} 
+                      ${linkStyles.hover.icon}`}>
+                      <IconComponent isActive={isActive} />
+                    </div>
                     <div>
-                      <p className={`text-base ${isActive?"text-mygreen":"text-myblack"} font-semibold`}>
+                      <p className={`text-base font-semibold 
+                        ${isActive ? linkStyles.active.text : linkStyles.inactive.text} 
+                        ${linkStyles.hover.text}`}>
                         {link.name}
                       </p>
                       <p className="text-[#8C8C8C] text-sm max-w-[284px] font-medium">
@@ -171,17 +195,11 @@ export  function NavbarCardm3() {
   );
 }
 
-
-
-
-
-
-
-export  function NavbarCarddesktop() {
+export function NavbarCarddesktop() {
   const pathname = usePathname();
 
   return (
-    <div className="w-[1000px]  bg-white px-[40px] pt-[54px] pb-[83px] rounded-[10px] shadow hidden xl:flex">
+    <div className="w-[1000px] bg-white px-[40px] pt-[54px] pb-[83px] rounded-[10px] shadow hidden xl:flex">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-[52px]">
         {Features.map((section, index) => (
           <div key={index}>
@@ -197,13 +215,17 @@ export  function NavbarCarddesktop() {
                   <Link
                     href={link.path}
                     key={i}
-                    className={`flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md hover:bg-[#F6F6F6] transition-colors duration-200 ${
-                      isActive ? "bg-[#F6F6F6]" : ""
-                    }`}
+                    className={`group flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md transition-colors duration-200 
+                      ${linkStyles.hover.group} ${isActive ? linkStyles.active.bg : ""}`}
                   >
-                    <IconComponent isActive={isActive} />
+                    <div className={`${isActive ? linkStyles.active.icon : linkStyles.inactive.icon} 
+                      ${linkStyles.hover.icon}`}>
+                      <IconComponent isActive={isActive} />
+                    </div>
                     <div>
-                    <p className={`text-base ${isActive?"text-mygreen":"text-myblack"} font-semibold`}>
+                      <p className={`text-base font-semibold 
+                        ${isActive ? linkStyles.active.text : linkStyles.inactive.text} 
+                        ${linkStyles.hover.text}`}>
                         {link.name}
                       </p>
                       <p className="text-[#8C8C8C] text-sm max-w-[284px] font-medium">
@@ -213,33 +235,31 @@ export  function NavbarCarddesktop() {
                   </Link>
                 );
               })}
-            
             </div>
           </div>
         ))}
-          <div>
-                <Image
-            src="/images/features.svg" alt={""}
+        <div>
+          <Image
+            src="/images/features.svg" 
+            alt="Features"
             height={300}
             width={300}
-            priority={true} />
-
-                <p className="font-semibold text-base text-myblack  leading-[100%] tracking-[0%] mt-2">Learn more about our Features</p>
-              </div>
+            priority={true} 
+          />
+          <p className="font-semibold text-base text-myblack leading-[100%] tracking-[0%] mt-2">
+            Learn more about our Features
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 
-
-
-
-
-export  function NavbarCarddesktop2() {
+export function NavbarCarddesktop2() {
   const pathname = usePathname();
 
   return (
-    <div className="w-[1000px]  bg-white px-[40px] pt-[54px] pb-[83px] rounded-[10px] shadow hidden xl:flex">
+    <div className="w-[1000px] bg-white px-[40px] pt-[54px] pb-[83px] rounded-[10px] shadow hidden xl:flex">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-[52px]">
         {product.map((section, index) => (
           <div key={index}>
@@ -255,13 +275,17 @@ export  function NavbarCarddesktop2() {
                   <Link
                     href={link.path}
                     key={i}
-                    className={`flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md hover:bg-[#F6F6F6] transition-colors duration-200 ${
-                      isActive ? "bg-[#F6F6F6]" : ""
-                    }`}
+                    className={`group flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md transition-colors duration-200 
+                      ${linkStyles.hover.group} ${isActive ? linkStyles.active.bg : ""}`}
                   >
-                    <IconComponent isActive={isActive} />
+                    <div className={`${isActive ? linkStyles.active.icon : linkStyles.inactive.icon} 
+                      ${linkStyles.hover.icon}`}>
+                      <IconComponent isActive={isActive} />
+                    </div>
                     <div>
-                    <p className={`text-base ${isActive?"text-mygreen":"text-myblack"} font-semibold`}>
+                      <p className={`text-base font-semibold 
+                        ${isActive ? linkStyles.active.text : linkStyles.inactive.text} 
+                        ${linkStyles.hover.text}`}>
                         {link.name}
                       </p>
                       <p className="text-[#8C8C8C] text-sm max-w-[284px] font-medium">
@@ -271,32 +295,31 @@ export  function NavbarCarddesktop2() {
                   </Link>
                 );
               })}
-            
             </div>
           </div>
         ))}
-          <div>
-                <Image
-                  priority={true} 
-            src="/images/product.svg" height={300}
-            width={300} alt={""}/>
-    
-
-                <p className="font-semibold text-base text-myblack  leading-[100%] tracking-[0%] mt-2">Learn more about our Products</p>
-              </div>
+        <div>
+          <Image
+            priority={true} 
+            src="/images/product.svg" 
+            height={300}
+            width={300} 
+            alt="Product"
+          />
+          <p className="font-semibold text-base text-myblack leading-[100%] tracking-[0%] mt-2">
+            Learn more about our Products
+          </p>
+        </div>
       </div>
     </div>
   );
 }
 
-
-
-
-export  function NavbarCarddesktop3() {
+export function NavbarCarddesktop3() {
   const pathname = usePathname();
 
   return (
-    <div className="w-[1000px]  bg-white px-[40px] pt-[54px] pb-[83px] rounded-[10px] shadow hidden xl:flex">
+    <div className="w-[1000px] bg-white px-[40px] pt-[54px] pb-[83px] rounded-[10px] shadow hidden xl:flex">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-[52px]">
         {Resources.map((section, index) => (
           <div key={index}>
@@ -312,13 +335,17 @@ export  function NavbarCarddesktop3() {
                   <Link
                     href={link.path}
                     key={i}
-                    className={`flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md hover:bg-[#F6F6F6] transition-colors duration-200 ${
-                      isActive ? "bg-[#F6F6F6]" : ""
-                    }`}
+                    className={`group flex max-w-[365px] items-start gap-3 px-5 py-3 rounded-md transition-colors duration-200 
+                      ${linkStyles.hover.group} ${isActive ? linkStyles.active.bg : ""}`}
                   >
-                    <IconComponent isActive={isActive} />
+                    <div className={`${isActive ? linkStyles.active.icon : linkStyles.inactive.icon} 
+                      ${linkStyles.hover.icon}`}>
+                      <IconComponent isActive={isActive} />
+                    </div>
                     <div>
-                      <p className={`text-base ${isActive?"text-mygreen":"text-myblack"} font-semibold`}>
+                      <p className={`text-base font-semibold 
+                        ${isActive ? linkStyles.active.text : linkStyles.inactive.text} 
+                        ${linkStyles.hover.text}`}>
                         {link.name}
                       </p>
                       <p className="text-[#8C8C8C] text-sm max-w-[284px] font-medium">
@@ -328,19 +355,21 @@ export  function NavbarCarddesktop3() {
                   </Link>
                 );
               })}
-            
             </div>
           </div>
         ))}
-          <div>
-                <Image
-                  priority={true} 
-                src="/images/resources.svg"height={300}
-                width={300} alt={""}/>
-        
-
-                <p className="font-semibold text-base text-myblack  leading-[100%] tracking-[0%] mt-2">We’ve just released an update!</p>
-              </div>
+        <div>
+          <Image
+            priority={true} 
+            src="/images/resources.svg"
+            height={300}
+            width={300} 
+            alt="Resources"
+          />
+          <p className="font-semibold text-base text-myblack leading-[100%] tracking-[0%] mt-2">
+            We've just released an update!
+          </p>
+        </div>
       </div>
     </div>
   );
