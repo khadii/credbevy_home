@@ -1,10 +1,11 @@
+import Image from "next/image";
 export const SendIconWrapper = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
     src="./images/send.svg"
     alt="Send"
+    height={24}
+    width={24}
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
         : "",
@@ -13,12 +14,12 @@ export const SendIconWrapper = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Level = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
     src="./images/level.svg"
     alt="Send"
+    height={24}
+    width={24}
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
         : "",
@@ -26,12 +27,12 @@ export const Level = ({ isActive }: { isActive: boolean }) => (
   />
 );
 export const Global = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
     src="./images/global.svg"
     alt="Send"
+    height={24}
+    width={24}
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
         : "",
@@ -40,12 +41,12 @@ export const Global = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Repeat = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
     src="./images/repeat.svg"
     alt="Send"
+    height={24}
+    width={24}
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
         : "",
@@ -54,12 +55,12 @@ export const Repeat = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Wallet = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
     src="./images/wallet.svg"
     alt="Send"
+    height={24}
+    width={24}
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
         : "",
@@ -68,12 +69,12 @@ export const Wallet = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Command = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/command.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
         : "",
@@ -82,12 +83,12 @@ export const Command = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Profile = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/profile-2user.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
         : "",
@@ -96,12 +97,12 @@ export const Profile = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Call = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/call-calling.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)"
         : "",
@@ -110,12 +111,12 @@ export const Call = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Briefcase = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/briefcase.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -124,12 +125,12 @@ export const Briefcase = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Teacher = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/teacher.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -138,12 +139,12 @@ export const Teacher = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Earth = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/earth.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -152,12 +153,12 @@ export const Earth = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Message = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/message-question.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -166,12 +167,12 @@ export const Message = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Book = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/book-saved.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -180,12 +181,12 @@ export const Book = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Video = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/video-slash.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -194,12 +195,12 @@ export const Video = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Dollar = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/dollar-circle.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -208,12 +209,12 @@ export const Dollar = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Bank = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/bank.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -222,12 +223,12 @@ export const Bank = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Lock = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/lock.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -236,12 +237,12 @@ export const Lock = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const UnLock = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/unlock.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",
@@ -250,12 +251,12 @@ export const UnLock = ({ isActive }: { isActive: boolean }) => (
 );
 
 export const Bubble = ({ isActive }: { isActive: boolean }) => (
-  <img
+  <Image
+    height={24}
+    width={24}
     src="./images/bubble.svg"
     alt="Send"
     style={{
-      width: "24px",
-      height: "24px",
       filter: isActive
         ? "brightness(0) saturate(100%) invert(33%) sepia(28%) saturate(776%) hue-rotate(141deg) brightness(93%) contrast(88%)" // #156064
         : "",

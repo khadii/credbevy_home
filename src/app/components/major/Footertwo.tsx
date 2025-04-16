@@ -4,7 +4,7 @@ import { useState } from "react";
 import { CustomButtonTwo } from "../customButton";
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
-
+import Image from "next/image";
 export default function Footertwo() {
   const footerData = [
     {
@@ -68,7 +68,7 @@ export default function Footertwo() {
     </div>
   </div>
   <div className="absolute -left-24  -top-24">
-    <img src="images/Group.svg"/> 
+    <Image src="images/Group.svg" alt={""} height={570 } width={570}/> 
   </div>
 </div>
       {/* white */}
@@ -76,10 +76,12 @@ export default function Footertwo() {
         <div className="  w-full flex lg:flex-row lg:gap-[121px] flex-col gap-6 lg:mb-[90px] mb-[52px] max-w-[1224px]">
           {/* logosection */}
           <div className="  ">
-            <img
+            <Image
               src="/images/desktoplogo.svg"
               alt="logo"
               className="w-auto h-auto lg:flex hidden"
+              height={135}
+              width={234}
             />
           </div>
 
@@ -110,10 +112,12 @@ export default function Footertwo() {
           {/* mobile
            */}
           <div className=" ">
-            <img
+            <Image
               src="/images/mobile.svg"
               alt="logo"
               className="w-auto h-auto lg:hidden flex  "
+              height={93}
+              width={394}
             />
           </div>
           <div className="w-full lg:hidden flex flex-col gap-6">

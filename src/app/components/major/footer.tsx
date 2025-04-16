@@ -2,6 +2,7 @@ import React from "react";
 import CustomButton, { CustomButtonTwo } from "../customButton";
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 const logo = "/images/logo.svg";
 export default function Footer() {
   const footerData = [
@@ -58,7 +59,8 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row lg:items-start space-y-8 lg:space-y-0 lg:space-x-[214px] py-[40px] sm:py-[60px] lg:py-[90px]">
   {/* logo */}
   <div className="flex  lg:justify-start">
-    <img src={logo} alt="credbevy" className="w-[120px] sm:w-[140px] h-full" />
+    <Image
+     src={logo} alt="credbevy" className="w-[120px] sm:w-[140px] h-full" />
   </div>
 
   {/* footer links */}

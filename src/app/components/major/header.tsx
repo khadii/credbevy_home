@@ -4,6 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import CustomButton, { CustomButtonMobile } from "../customButton";
 import { ChevronDown, Menu, X } from "lucide-react";
 import NavbarCard, { NavbarCard2, NavbarCarddesktop, NavbarCarddesktop2, NavbarCarddesktop3, NavbarCardm3 } from "./Cards/navbarCard";
+import Image from "next/image";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -91,7 +92,8 @@ export default function Header() {
         <div className="w-full lg:flex items-center justify-between max-w-7xl">
           {/* Logo */}
           <div>
-            <img src={logo} alt="credbevy" className="w-full h-full" />
+          <Image src={logo} alt="credbevy" width={185} height={44} />
+
           </div>
 
           {/* Navigation Links */}
@@ -149,7 +151,8 @@ export default function Header() {
         <div className="flex justify-between items-center px-4 py-4 overflow-scroll ">
           {/* Mobile Logo */}
           <div>
-            <img src={logo} alt="credbevy" className="h-8 w-auto" />
+          <Image src={logo} alt="credbevy" width={157} height={37} />
+
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -167,7 +170,8 @@ export default function Header() {
             <div className="flex justify-between items-center px-4 py-4">
               {/* Mobile Logo */}
               <div>
-                <img src={logo} alt="credbevy" className="h-8 w-auto" />
+              <Image src={logo} alt="credbevy" width={157} height={37} />
+
               </div>
 
               {/* Mobile Menu Toggle */}

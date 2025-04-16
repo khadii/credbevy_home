@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { Star } from "lucide-react"; // Example icon
 import { IoMdStar } from "react-icons/io";
-
+import Image from "next/image";
 interface CardthreeProps {
   handle: string;
   testimonies: string;
@@ -11,7 +11,13 @@ interface CardthreeProps {
   link?: string;
 }
 
-const Cardthree: React.FC<CardthreeProps> = ({ handle, testimonies, imageSrc, title, link = "#" }) => {
+const Cardthree: React.FC<CardthreeProps> = ({
+  handle,
+  testimonies,
+  imageSrc,
+  title,
+  link = "#",
+}) => {
   return (
     <div className="max-w-[400px] lg:min-w-[400px] max-h-[287px] py-[33px] px-[23px] bg-white w-full  flex flex-col items-center">
       <p className="font-bold text-sm text-myblack mb-7">{handle}</p>
@@ -23,11 +29,13 @@ const Cardthree: React.FC<CardthreeProps> = ({ handle, testimonies, imageSrc, ti
         ))}
       </div>
 
-      <p className="text-myblack2 text-xs font-medium mb-7 max-w-xs text-center">{testimonies}</p>
+      <p className="text-myblack2 text-xs font-medium mb-7 max-w-xs text-center">
+        {testimonies}
+      </p>
 
       <div className="flex items-center space-x-4">
         <Link href={link}>
-          <img src={imageSrc} alt={title} className="w-auto h-auto" />
+          <Image src={imageSrc} alt={title} height={25} width={25} />
         </Link>
         <p className="text-myblack text-xs font-bold">App Store</p>
       </div>

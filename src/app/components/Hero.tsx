@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineApple } from "react-icons/ai";
 import { BiLogoPlayStore } from "react-icons/bi";
+import Image from "next/image";
 
 export default function Hero() {
   const sponsors = [
@@ -69,18 +70,22 @@ export default function Hero() {
         </div>
         {/* phone images */}
         <div className="w-full md:flex justify-center hidden mb-[79px]">
-          <img
-            src="/images/phones.svg"
-            className="w-auto h-auto"
-            alt="credbevy"
-          />
+        <Image
+      src="/images/phones.svg"
+      alt="credbevy"
+
+  height={843}
+  width={1440}
+    />
         </div>
         <div className="w-full md:hidden justify-center flex mb-[30px]">
-          <img
+          <Image
             src="/images/phonesmobile.svg"
-            className="w-auto h-auto"
             alt="credbevy"
-          />
+
+  height={310}
+  width={530}
+    />
         </div>
         {/* sponsors */}
         <div className="w-full overflow-hidden relative">
@@ -88,12 +93,14 @@ export default function Hero() {
             {sponsors.map((sponsor, index) => (
               <React.Fragment key={index}>
                 {sponsors.map((s, i) => (
-                  <img
+                  <Image
                     key={`${index}-${i}`}
                     src={s.src}
                     alt={s.alt}
                     className="w-[128px] lg:w-auto h-auto mx-[22.5px]"
-                  />
+                    height={55}
+                    width={197}
+                      />
                 ))}
               </React.Fragment>
             ))}

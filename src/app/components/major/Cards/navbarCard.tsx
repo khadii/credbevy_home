@@ -5,6 +5,7 @@ import React from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { ChevronDown } from "lucide-react";
+import Image from "next/image";
 
 export default function NavbarCard() {
   const pathname = usePathname();
@@ -217,8 +218,10 @@ export  function NavbarCarddesktop() {
           </div>
         ))}
           <div>
-                <img
-                src="/images/features.svg"/>
+                <Image
+            src="/images/features.svg" alt={""}
+            height={300}
+            width={300}/>
 
                 <p className="font-semibold text-base text-myblack  leading-[100%] tracking-[0%] mt-2">Learn more about our Features</p>
               </div>
@@ -272,8 +275,10 @@ export  function NavbarCarddesktop2() {
           </div>
         ))}
           <div>
-                <img
-                src="/images/product.svg"/>
+                <Image
+            src="/images/product.svg" height={300}
+            width={300} alt={""}/>
+    
 
                 <p className="font-semibold text-base text-myblack  leading-[100%] tracking-[0%] mt-2">Learn more about our Products</p>
               </div>
@@ -326,8 +331,10 @@ export  function NavbarCarddesktop3() {
           </div>
         ))}
           <div>
-                <img
-                src="/images/resources.svg"/>
+                <Image
+                src="/images/resources.svg"height={300}
+                width={300} alt={""}/>
+        
 
                 <p className="font-semibold text-base text-myblack  leading-[100%] tracking-[0%] mt-2">We’ve just released an update!</p>
               </div>
