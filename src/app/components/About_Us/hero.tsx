@@ -1,18 +1,28 @@
 import Image from "next/image";
 import React from "react";
 
-export default function Hero() { 
+export default function hero() {
   return (
-    <section className="w-full">
-      <div className="space-y-6 lg:mb-[96px] mb-[49px] pt-[49px] lg:pt-[129px]">
-        <p className="text-mygrey2 font-semibold text-[24px] leading-[100%] tracking-[0%] text-center">
+    <section>
+      <div className="space-y-6 lg:mb-[96px]  mb-[49px]  pt-[49px] lg:pt-[129px]">
+        <p className="text-mygrey2 font-semibold text-[24px] leading-[100%] tracking-[0%] text-center ">
           About us
         </p>
         <p className="text-myblack font-bold lg:text-[96px] leading-[100%] tracking-[0%] text-center text-[48px]">
           Our Story
         </p>
       </div>
-      <div className="w-full relative h-[600px]" >
+      <div className="w-full justify-center flex xl:hidden" >
+        <Image
+          src={"/images/imagehero2.svg"}
+          alt={"credbevy"}
+          priority={true}
+          width={1440}
+          height={600}
+        />
+      </div>
+
+      <div className="w-full relative h-[600px] xl:flex hidden" >
         <Image
           src={"/images/imagehero2.svg"}
           alt={"credbevy"}
@@ -25,3 +35,5 @@ export default function Hero() {
     </section>
   );
 }
+
+
