@@ -10,7 +10,7 @@ export default function SectionFour() {
           <p className="font-bold text-[32px] sm:text-[40px] lg:text-[64px] leading-tight text-myblack max-w-full  text-center sm:text-left lg:max-w-[553px]">
           Mortgage Loans
           </p>
-          <h1 className="text-myyellow font-semibold text-base leading-none tracking-normal mb-6 ">
+          <h1 className="text-myyellow font-semibold text-base leading-none tracking-normal mb-6 text-center md:text-left">
           Make Your Dream Home a Reality
           </h1>
 
@@ -72,7 +72,7 @@ export default function SectionFour() {
            </div>
           </div>
           <CustomButtonTwo
-            text={"Apply Now"}
+            text={"Check Your Eligibility"}
             className="w-full sm:w-[342px]  mt-8 lg:mt-[68px] "
           />
         </div>

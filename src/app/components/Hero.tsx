@@ -45,28 +45,42 @@ export default function Hero() {
 
           {/* dowloand buttons */}
           {/* Download buttons - always in row */}
-<div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-8 mb-[60px] lg:mb-[15px] w-full px-4 sm:px-0">
-  <Link
-    href={""}
-    className="h-[56px] sm:h-[66px] flex items-center gap-2 sm:gap-4 rounded-full bg-white justify-center py-3 px-4 sm:py-[17px] sm:px-[30px] min-w-[160px] sm:min-w-[184px] flex-1 max-w-[191px]"
-  >
-    <BiLogoPlayStore size={24} className="sm:w-8 sm:h-8 w-6 h-6" />
-    <div className="text-left">
-      <p className="font-medium text-xs sm:text-sm text-myblack2 leading-tight">Download on</p>
-      <span className="font-semibold text-sm sm:text-base text-myblack2 leading-tight">Playstore</span>
-    </div>
-  </Link>
-  <Link
-    href={""}
-    className="h-[56px] sm:h-[66px] flex items-center gap-2 sm:gap-4 rounded-full bg-myblack2 justify-center py-3 px-4 sm:py-[17px] sm:px-[30px] min-w-[160px] sm:min-w-[184px] flex-1 max-w-[191px]"
-  >
-    <AiOutlineApple size={24} className="text-mywhite sm:w-8 sm:h-8 w-6 h-6" />
-    <div className="text-left">
-      <p className="font-medium text-xs sm:text-sm text-mywhite leading-tight">Download on</p>
-      <span className="font-semibold text-sm sm:text-base text-mywhite leading-tight">App Store</span>
-    </div>
-  </Link>
-</div>
+          <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-8 mb-[60px] lg:mb-[15px] w-full px-4 sm:px-0">
+            <Link
+              href={""}
+              className="h-[56px] sm:h-[66px] flex items-center gap-4 sm:gap-4 rounded-full bg-white justify-center py-3 px-[30px] sm:py-[17px] sm:px-[30px]"
+            >
+              <BiLogoPlayStore
+                size={24}
+                className="text-myblack2 sm:w-8 sm:h-8 w-6 h-6 "
+              />
+              <div className="text-left">
+                <p className="font-medium text-xs sm:text-sm text-myblack2 leading-tight whitespace-nowrap">
+                  Download on
+                </p>
+                <span className="font-semibold text-sm sm:text-base text-myblack2 leading-tight whitespace-nowrap">
+                  Playstore
+                </span>
+              </div>
+            </Link>
+            <Link
+              href={""}
+              className="h-[56px] sm:h-[66px] flex items-center gap-4 sm:gap-4 rounded-full bg-myblack2 justify-center py-3 px-[30px]  sm:py-[17px]  shadow "
+            >
+              <AiOutlineApple
+                size={24}
+                className="text-mywhite sm:w-8 sm:h-8 w-6 h-6"
+              />
+              <div className="text-left">
+                <p className="font-medium text-xs sm:text-sm text-mywhite leading-tight whitespace-nowrap">
+                  Download on
+                </p>
+                <span className="font-semibold text-sm sm:text-base text-mywhite leading-tight whitespace-nowrap">
+                  App Store
+                </span>
+              </div>
+            </Link>
+          </div>
         </div>
         {/* phone images */}
         <div className="w-full md:flex justify-center hidden mb-[79px]">

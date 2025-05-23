@@ -20,7 +20,7 @@ export default function SectionThree() {
           <p className="font-bold text-[32px] sm:text-[40px] lg:text-[64px] leading-tight text-myblack max-w-full  text-center sm:text-left lg:max-w-[553px]">
             Business Loans
           </p>
-          <h1 className="text-myyellow font-semibold text-base leading-none tracking-normal mb-6 ">
+          <h1 className="text-myyellow font-semibold text-base leading-none tracking-normal mb-6 text-center md:text-left">
             Powering Your Business Growth
           </h1>
 

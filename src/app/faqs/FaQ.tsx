@@ -2,10 +2,9 @@
 
 import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import CustomButton from './customButton'
-import { borrowerFaqItems } from '../library/faq';
 
-const FAQ = () => {
+
+const FAQ = ({data}:{data:any}) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
 
@@ -16,14 +15,10 @@ const FAQ = () => {
 
   return (
    <section className='w-full flex justify-center'>
-     <div className="max-w-[1243px] px-[16px] lg:px-6 w-full">
-      <div className="text-center mb-6">
-        <h2 className="lg:text-[40px] text-myblack font-bold text-2xl">Frequently Asked Questions</h2>
-        <p className="italic opacity-80 font-semibold text-myblack text-base text-center mb-12">What you need to know</p>
-      </div>
+     <div className=" px-[16px] lg:px-24 w-full">
       
       <div className="space-y-4">
-        {(showAll ? borrowerFaqItems : borrowerFaqItems.slice(0, 5)).map((item, index) => (
+        {data.map((item:any, index:any) => (
           <div key={index} className="border border-[#606060] rounded-sm overflow-hidden">
             <button
               className="w-full flex justify-between items-center p-4 text-left hover:bg-gray-50 focus:outline-none"
@@ -41,16 +36,6 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-
-      {borrowerFaqItems.length > 5 && (
-        <div className="mt-12 w-full pb-[245px] justify-center flex">
-          <CustomButton 
-            text={showAll ? "See Less" : "See All"} 
-            className="px-[130px]"
-            onClick={() => setShowAll(!showAll)}
-          />
-        </div>
-      )}
     </div>
    </section>
   );

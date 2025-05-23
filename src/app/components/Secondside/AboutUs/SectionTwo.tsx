@@ -10,7 +10,7 @@ export default function SectionTwo() {
           <p className="font-bold text-[32px] sm:text-[40px] lg:text-[64px] leading-tight text-myblack max-w-full  text-center sm:text-left lg:max-w-[553px]">
             Personal Loans
           </p>
-          <h1 className="text-myyellow font-semibold text-base leading-none tracking-normal mb-6 ">
+          <h1 className="text-myyellow font-semibold text-base leading-none tracking-normal mb-6 text-center md:text-left">
             Fast &amp; Flexible Financing for Life’s Needs
           </h1>
 
