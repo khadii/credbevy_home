@@ -45,10 +45,10 @@ export default function Hero() {
 
           {/* dowloand buttons */}
           {/* Download buttons - always in row */}
-          <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-8 mb-[60px] lg:mb-[15px] w-full px-4 sm:px-0">
+          <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-8 mb-[60px] lg:mb-[15px] w-full px-4 sm:px-0 ">
             <Link
               href={""}
-              className="h-[56px] sm:h-[66px] flex items-center gap-4 sm:gap-4 rounded-full bg-white justify-center py-3 px-[30px] sm:py-[17px] sm:px-[30px]"
+              className="h-[56px] sm:h-[66px] flex items-center gap-4 sm:gap-4 rounded-full bg-white justify-center py-3 px-[30px] sm:py-[17px] sm:px-[30px] whitespace-nowrap shadow"
             >
               <BiLogoPlayStore
                 size={24}
@@ -65,7 +65,7 @@ export default function Hero() {
             </Link>
             <Link
               href={""}
-              className="h-[56px] sm:h-[66px] flex items-center gap-4 sm:gap-4 rounded-full bg-myblack2 justify-center py-3 px-[30px]  sm:py-[17px]  shadow "
+              className="h-[56px] sm:h-[66px] flex items-center gap-4 sm:gap-4 rounded-full bg-myblack2 justify-center py-3 px-[30px]  sm:py-[17px]    whitespace-nowrap shadow "
             >
               <AiOutlineApple
                 size={24}
