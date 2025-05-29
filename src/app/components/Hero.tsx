@@ -48,7 +48,7 @@ export default function Hero() {
           <div className="flex flex-row flex-wrap justify-center gap-3 sm:gap-8 mb-[60px] lg:mb-[15px] w-full px-4 sm:px-0 ">
             <Link
               href={""}
-              className="h-[56px] sm:h-[66px] flex items-center gap-4 sm:gap-4 rounded-full bg-white justify-center py-3 px-[30px] sm:py-[17px] sm:px-[30px] whitespace-nowrap shadow"
+              className="h-[56px] sm:h-[66px] flex items-center gap-4 sm:gap-4 rounded-full bg-white justify-center py-3 px-[30px] sm:py-[17px] sm:px-[30px] whitespace-nowrap "
             >
               <BiLogoPlayStore
                 size={24}
@@ -83,22 +83,22 @@ export default function Hero() {
           </div>
         </div>
         {/* phone images */}
-        <div className="w-full md:flex justify-center hidden mb-[79px]">
+        <div className="w-full  justify-center mb-[79px]">
           <Image
-            src="/images/phones.svg"
+            src="/home.svg"
             alt="credbevy"
             height={843}
             width={1440}
           />
         </div>
-        <div className="w-full md:hidden justify-center flex mb-[30px]">
+        {/* <div className="w-full md:hidden justify-center flex mb-[30px]">
           <Image
             src="/images/phonesmobile.svg"
             alt="credbevy"
             height={310}
             width={530}
           />
-        </div>
+        </div> */}
         {/* sponsors */}
         <div className="w-full overflow-hidden relative">
           <div className="flex space-x-[45px] lg:space-x-[70px] animate-marquee items-center mb-[50px] lg:mb-[150px]">

@@ -5,10 +5,12 @@ import CustomButton, { CustomButtonMobile } from "../customButton";
 import { ChevronDown, Menu, X } from "lucide-react";
 import NavbarCard, { NavbarCard2, NavbarCarddesktop, NavbarCarddesktop2, NavbarCarddesktop3, NavbarCardm3 } from "./Cards/navbarCard";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const logo = "/images/logo.svg";
+  const router=useRouter()
   
   const footerData = [
     {
@@ -21,7 +23,7 @@ export default function Header() {
     },
     {
       title: "Partners",
-      data: <NavbarCardm3 />
+      // data: <NavbarCardm3 />
     },
     {
       title: "Company",
@@ -40,7 +42,7 @@ export default function Header() {
     },
     {
       title: "Partners",
-      data: <NavbarCarddesktop3 />
+      // data: <NavbarCarddesktop3 />
     },
     {
       title: "Resources",
@@ -117,13 +119,17 @@ export default function Header() {
                   <div 
                     ref={el => { triggerRefs.current[index] = el; }}
                     className="font-bold text-base text-myblack flex items-center space-x-2 cursor-pointer"
-                    onClick={() => toggleDropdown(index)}
+                    onClick={() => {toggleDropdown(index)
+                       if (index===2){
+                        router.push('/partners')
+                      }
+                    }}
                   >
                     <p>{data.title}</p>
-                    <ChevronDown 
+                   {index!==2 &&(   <ChevronDown 
                       size={16} 
                       className={`transition-transform ${openIndex === index ? "rotate-180" : ""}`}
-                    />
+                    />)}
                   </div>
                   
                   {openIndex === index && (
@@ -189,13 +195,17 @@ export default function Header() {
                   <div 
                     ref={el => { triggerRefs.current[footerDataDesktop.length + index] = el; }}
                     className="flex justify-between items-center text-sm font-bold text-myblack cursor-pointer"
-                    onClick={() => toggleDropdown(index)}
+                    onClick={() => {toggleDropdown(index)
+                      if (index===2){
+                        router.push('/partners')
+                      }
+                    }}
                   >
                     <span className="pb-4">{data.title}</span>
-                    <ChevronDown 
+                  {index!==2 &&(  <ChevronDown 
                       size={20} 
-                      className={`transition-transform ${openIndex === index ? "rotate-180" : ""}`}
-                    />
+                      className={`transition-transform ${openIndex === index ? "rotate-180":""}`}
+                    />)}
                   </div>
                   
                   {/* Mobile Dropdown Items */}

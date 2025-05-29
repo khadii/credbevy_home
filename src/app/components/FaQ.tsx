@@ -4,11 +4,12 @@ import React, { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import CustomButton from './customButton'
 import { borrowerFaqItems } from '../library/faq';
+import { useRouter } from 'next/navigation';
 
 const FAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [showAll, setShowAll] = useState(false);
-
+const router = useRouter()
 
   const toggleQuestion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -43,11 +44,11 @@ const FAQ = () => {
       </div>
 
       {borrowerFaqItems.length > 5 && (
-        <div className="mt-12 w-full pb-[245px] justify-center flex">
+        <div className="mt-12 w-full pb-[245px] justify-center flex ">
           <CustomButton 
             text={showAll ? "See Less" : "See All"} 
-            className="px-[130px]"
-            onClick={() => setShowAll(!showAll)}
+            className="px-[130px] cursor-pointer"
+            onClick={() =>router.push('/faqs')}
           />
         </div>
       )}

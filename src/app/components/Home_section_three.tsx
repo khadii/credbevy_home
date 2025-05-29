@@ -15,17 +15,26 @@ export default function Home_section_three() {
         <div className="w-full  grid lg:grid-cols-3 md:grid-cols-3 gap-[38px] ">
           {" "}
           <CardOne
-           
-                      title={"Multiple Loan Options"}
-                      description={"Credbevy gives you opportunity to see tailor made loan offers available to you."} imageSrc={"/images/sun.svg"}          />
-           <CardOne
-           
-                      title={"Wide Range of Lenders"}
-                      description={"Access a network of verified lenders offering competitive loan options tailored to your needs."} imageSrc={"/images/bubble.svg"}          />
-           <CardOne
-           
-                      title={"Fast & Easy Application"}
-                      description={"Complete your loan application in minutes and get matched with lenders instantly."} imageSrc={"/images/flash.svg"}          />
+            title={"Multiple Loan Options"}
+            description={
+              "Credbevy gives you opportunity to see tailor made loan offers available to you."
+            }
+            imageSrc={"/images/sun.svg"}
+          />
+          <CardOne
+            title={"Wide Range of Lenders"}
+            description={
+              "Access a network of verified lenders offering competitive loan options tailored to your needs."
+            }
+            imageSrc={"/bubblee.svg"}
+          />
+          <CardOne
+            title={"Fast & Easy Application"}
+            description={
+              "Complete your loan application in minutes and get matched with lenders instantly."
+            }
+            imageSrc={"/images/flash.svg"}
+          />
         </div>
       </div>
     </section>

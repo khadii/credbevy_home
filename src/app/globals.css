@@ -1,50 +1,102 @@
 @import "tailwindcss";
 
+/* inter Font Setup */
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-Thin-BETA.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-ExtraLight-BETA.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-Light-BETA.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/src/app/library/inter/Inter-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 
 :root {
   --background: #FAFAFA;
   --foreground: #171717;
 
-   /* Custom Colors */
-   --color-mygreen: #156064;
-   /* myblac */
-   --color-myblack2: #111111;
-   --color-myblack: #333333;
-   --color-myyellow: #F4C418;
-   --color-mywhite: #FFFFFF;
-   --color-darkgreen: #DFFFEA;
-   --color-darkgreentwo: #005A46;
-   --color-mygrey:#8A8B9F;
-   --color-mygrey2:#8C8C8C;
- 
+  /* Custom Colors */
+  --color-mygreen: #156064;
+  --color-myblack2: #111111;
+  --color-myblack: #333333;
+  --color-myyellow: #F4C418;
+  --color-mywhite: #FFFFFF;
+  --color-darkgreen: #DFFFEA;
+  --color-darkgreentwo: #005A46;
+  --color-mygrey:#8A8B9F;
+  --color-mygrey2:#8C8C8C;
 }
-
-
- /* .font-bold { font-family: var(--font-general-bold), sans-serif; } 
- .font-medium { font-family: var(--font-general-medium), sans-serif; }
-.font-semibold { font-family: var(--font-general-semibold), sans-serif; }
-.font-regular { font-family: var(--font-general-regular), sans-serif; }
-.font-light { font-family: var(--font-general-light), sans-serif; }
-.font-extralight { font-family: var(--font-general-extralight), sans-serif; } */
-
-
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: 'Inter', sans-serif;
-
 }
 
-
-/* Apply to Tailwind Utility Classes */
+/* Tailwind Utility Classes */
 .text-mygrey { color: var(--color-mygrey); }
 .text-mygreen { color: var(--color-mygreen); }
 .text-myyellow { color: var(--color-myyellow); }
@@ -59,7 +111,27 @@ body {
 .bg-darkgreentwo { background-color: var(--color-darkgreentwo); }
 .text-mygrey2 { color: var(--color-mygrey2); }
 
+/* Font utility classes */
+/* Font Family Utilities */
+.font-inter { 
+  font-family: 'Inter', sans-serif !important; 
+}
 
+Font Weight Utilities
+.font-thin { font-weight: 100 !important; }
+.font-extralight { font-weight: 200 !important; }
+.font-light { font-weight: 300 !important; }
+.font-normal { font-weight: 400 !important; }
+.font-medium { font-weight: 500 !important; }
+.font-semibold { font-weight: 600 !important; }
+.font-bold { font-weight: 700 !important; }
+.font-extrabold { font-weight: 800 !important; }
+.font-black { font-weight: 900 !important; }
+
+/* Optional: If you need custom weights like in your example */
+.font-325 { font-weight: 325 !important; }
+.font-350 { font-weight: 350 !important; }
+.font-book { font-weight: 400 !important; } 
 @keyframes marquee {
   0% {
     transform: translateX(0%);
@@ -79,10 +151,6 @@ body {
   display: none;
 }
 .custom-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; 
+  scrollbar-width: none;  
 }
-
-/* <p className="text-primary font-bold">This is bold text.</p>
-<p className="text-secondary font-medium">This is medium text.</p>
-<p className="text-accent font-light">This is light text.</p> */
