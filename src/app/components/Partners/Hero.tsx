@@ -35,6 +35,7 @@ export default function hero() {
           fill
           style={{ objectFit: "cover" }}
           quality={100}
+          loading="eager"
         />
       </div>
       <div className="w-full flex justify-center px-[20px]">

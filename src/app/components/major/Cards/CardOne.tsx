@@ -19,6 +19,7 @@ const CardOne: React.FC<CardOneProps> = ({ imageSrc, title, description }) => {
           alt="features"
           fill
           className="object-contain"
+          loading="eager"
         />
       </div>
       <p className="text-[20px] text-mywhite font-semibold mb-2">{title}</p>

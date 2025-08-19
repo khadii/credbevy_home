@@ -93,7 +93,7 @@ export default function Header() {
       <nav className="lg:w-full xl:flex lg:justify-center lg:px-24 pt-10 hidden relative">
         <div className="w-full lg:flex items-center justify-between max-w-7xl">
           {/* Logo */}
-          <div>
+          <div onClick={()=>router.push('/')}>
           <Image src={logo} alt="credbevy" width={185} height={44} />
 
           </div>
@@ -156,7 +156,7 @@ export default function Header() {
       <nav className="xl:hidden sticky top-0 left-0 w-full z-50 bg-bg">
         <div className="flex justify-between items-center px-4 py-4 overflow-scroll ">
           {/* Mobile Logo */}
-          <div>
+           <div onClick={()=>router.push('/')}>
           <Image src={logo} alt="credbevy" width={157} height={37} />
 
           </div>
@@ -175,7 +175,7 @@ export default function Header() {
     >
             <div className="flex justify-between items-center px-4 py-4">
               {/* Mobile Logo */}
-              <div>
+               <div onClick={()=>router.push('/')}>
               <Image src={logo} alt="credbevy" width={157} height={37} />
 
               </div>

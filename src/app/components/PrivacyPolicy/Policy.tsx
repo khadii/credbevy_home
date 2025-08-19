@@ -1,9 +1,10 @@
 export default function Component() {
   return (
-    <div className="mx-auto px-[15px] lg:px-[100px] pb-12 pt-20">
+<div className="w-full justify-center flex ">
+        <div className="mx-auto px-[15px] lg:px-[100px] pb-12 pt-20 max-w-[1500px] ">
       <div className="prose prose-gray max-w-none dark:prose-invert">
         <p className="text-[20px] text-muted-foreground">
-          <strong>Effective Date:</strong> December 2024
+          <strong>Effective Date:</strong> 30th September 2024
         </p>
         <p className="font-medium text-[20px] text-myblack mb-[24px]">
           At Credbevy, we value your privacy and are committed to protecting the
@@ -136,7 +137,7 @@ export default function Component() {
             <li><strong>Deletion:</strong> You may request that we delete your personal data under certain circumstances, subject to our legal obligations.</li>
             <li><strong>Opt-Out:</strong> You can opt out of receiving marketing communications at any time by following the unsubscribe instructions provided in our emails or by contacting us directly.</li>
           </ul>
-          <p>
+           <p className=" text-myblack text-[20px]">
             To exercise any of these rights, please contact us at <strong>Support@credbevy.com</strong>.
           </p>
         </section>
@@ -184,5 +185,6 @@ export default function Component() {
         
       </div>
     </div>
+</div>
   );
 }

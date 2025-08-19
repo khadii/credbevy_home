@@ -5,7 +5,9 @@ import { CustomButtonTwo } from "../customButton";
 import Link from "next/link";
 import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 export default function Footertwo() {
+  const router=useRouter()
   const footerData = [
     {
       title: "Products",
@@ -70,7 +72,7 @@ export default function Footertwo() {
       <div className=" flex justify-center pt-[63px] lg:pt-[90px] lg:pl-[136px] lg:pr-[80px] px-4 lg:px-0">
         <div className="  w-full flex lg:flex-row lg:gap-[121px] flex-col gap-6 lg:mb-[90px] mb-[52px] max-w-[1224px]">
           {/* logosection */}
-          <div className="  ">
+           <div onClick={()=>router.push('/')}>
             <Image
               src="/images/desktoplogo.svg"
               alt="logo"
@@ -105,7 +107,7 @@ export default function Footertwo() {
           </div>
 
           {/* mobile */}
-          <div className=" ">
+           <div onClick={()=>router.push('/')}>
             <Image
               src="/images/mobile.svg"
               alt="logo"

@@ -14,8 +14,8 @@ export default function Page() {
   return (
     <section>
       <Header />
-      <div className="space-y-6 lg:mb-[62px] mb-[49px] pt-[49px] lg:pt-[129px] w-full justify-center flex items-center flex-col">
-        <p className="text-mygrey2 font-semibold text-[24px] leading-[100%] tracking-[0%] text-center">
+      <div className="space-y-6 lg:mb-[62px] mb-[49px] pt-[49px] lg:pt-[129px] w-full justify-center flex items-center flex-col ">
+        <p className="text-mygrey2 font-semibold text-[24px] leading-[100%] tracking-[0%] text-center ">
           FAQs
         </p>
         <p className="text-myblack font-bold lg:text-[96px] leading-[100%] tracking-[0%] text-center text-[48px] max-w-[872px]">

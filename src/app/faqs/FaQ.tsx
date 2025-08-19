@@ -15,7 +15,7 @@ const FAQ = ({data}:{data:any}) => {
 
   return (
    <section className='w-full flex justify-center'>
-     <div className=" px-[16px] lg:px-24 w-full">
+     <div className=" px-[16px] lg:px-24 w-full  max-w-[1500px]">
       
       <div className="space-y-4">
         {data.map((item:any, index:any) => (

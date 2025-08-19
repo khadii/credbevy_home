@@ -83,12 +83,14 @@ export default function Hero() {
           </div>
         </div>
         {/* phone images */}
-        <div className="w-full  justify-center mb-[79px]">
+        <div className="w-full flex justify-center mb-[79px]">
           <Image
             src="/home.svg"
             alt="credbevy"
             height={843}
             width={1440}
+           loading="eager" 
+             priority
           />
         </div>
         {/* <div className="w-full md:hidden justify-center flex mb-[30px]">
@@ -100,7 +102,7 @@ export default function Hero() {
           />
         </div> */}
         {/* sponsors */}
-        <div className="w-full overflow-hidden relative">
+        {/* <div className="w-full overflow-hidden relative">
           <div className="flex space-x-[45px] lg:space-x-[70px] animate-marquee items-center mb-[50px] lg:mb-[150px]">
             {sponsors.map((sponsor, index) => (
               <React.Fragment key={index}>
@@ -117,7 +119,7 @@ export default function Hero() {
               </React.Fragment>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
