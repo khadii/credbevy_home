@@ -58,15 +58,45 @@ export default function ErrorPage() {
             </button>
           </div>
 
-          {/* Decorative Elements */}
+          {/* Decorative Bouncing Dots */}
           <div className="mt-12 flex justify-center space-x-2">
-            <div className="w-2 h-2 bg-yellow-400 rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-yellow-500 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-2 h-2 bg-orange-500 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            <div className="w-2 h-2 bg-yellow-400 rounded-full bounce-sm"></div>
+            <div className="w-2 h-2 bg-yellow-500 rounded-full bounce-md" style={{ animationDelay: '0.1s' }}></div>
+            <div className="w-2 h-2 bg-orange-500 rounded-full bounce-lg" style={{ animationDelay: '0.2s' }}></div>
           </div>
         </div>
       </div>
       <Footertwo />
+
+      {/* Custom Bounce Animations */}
+      <style jsx>{`
+        @keyframes bounceSm {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+
+        @keyframes bounceMd {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-20px); }
+        }
+
+        @keyframes bounceLg {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-30px); }
+        }
+
+        .bounce-sm {
+          animation: bounceSm 1s infinite ease-in-out;
+        }
+
+        .bounce-md {
+          animation: bounceMd 1s infinite ease-in-out;
+        }
+
+        .bounce-lg {
+          animation: bounceLg 1s infinite ease-in-out;
+        }
+      `}</style>
     </>
   );
 }
