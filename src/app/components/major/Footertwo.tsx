@@ -31,7 +31,7 @@ export default function Footertwo() {
       title: "Company",
       links: [
         { name: "About", path: "/about" },
-        { name: "Contact", path: "/contact" },
+        { name: "Contact", path: "/contact-us" },
         { name: "Media", path: "/media" },
         { name: "Partners", path: "/partners" },
         { name: "Team", path: "/team" },
@@ -184,7 +184,7 @@ export default function Footertwo() {
                   Privacy Policy
                 </Link>
                 <Link
-                  href="/terms-of-service"
+                  href="/t&c"
                   className="text-xs sm:text-sm font-normal text-myblack underline"
                 >
                   Terms of Service

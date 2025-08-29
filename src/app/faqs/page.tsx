@@ -8,7 +8,7 @@ import FAQ from "./FaQ";
 import { borrowerFaqItems, lenderFaqItems } from "../library/faq";
 
 export default function Page() {
-  const tabs = ["For Borrower", "For Lenders"];
+  const tabs = ["For Borrowers", "For Lenders"];
   const [active, setActive] = useState(tabs[0]);
 
   return (
@@ -43,7 +43,7 @@ export default function Page() {
       </div>
       <div>
         <FAQ
-          data={active === "For Borrower" ? borrowerFaqItems : lenderFaqItems}
+          data={active === "For Borrowers" ? borrowerFaqItems : lenderFaqItems}
         />
       </div>
       <div>
